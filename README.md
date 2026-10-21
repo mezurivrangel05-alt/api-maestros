@@ -1,6 +1,6 @@
-# API de maestros
+# api-maestros
 
-API REST con Node.js, Express y PostgreSQL. La ruta de ejemplo queda disponible localmente en `http://localhost:3000/api/maestros/4`, equivalente a la forma de la URL que compartiste.
+API REST con Node.js, Express y PostgreSQL. La ruta de ejemplo queda disponible localmente en `http://localhost:3001/api/maestros/4`, equivalente a la forma de la URL que compartiste.
 
 ## Levantar todo en Docker
 
@@ -40,7 +40,7 @@ Ejemplo para crear:
 
 ## n8n
 
-En el primer acceso a `http://localhost:5678`, termina la configuración inicial del usuario propietario. En n8n, importa `n8n/workflows/consulta-maestros.json` (menú **Workflows → Import from file**), guarda y activa el flujo. Una vez activo, consulta `http://api:3000/api/maestros/4` cada minuto desde la red de Compose. Para cambiar el intervalo o el id, edita el nodo en n8n. La instancia y sus flujos guardados sobreviven reinicios en `n8n_data`.
+En el primer acceso a `http://localhost:5679`, termina la configuración inicial del usuario propietario. En n8n, importa `n8n/workflows/consulta-maestros.json` (menú **Workflows → Import from file**), guarda y activa el flujo. Una vez activo, consulta `http://api:3000/api/maestros/4` cada minuto desde la red de Compose. Para cambiar el intervalo o el id, edita el nodo en n8n. La instancia y sus flujos guardados sobreviven reinicios en `n8n_data`.
 
 ## Subir a GitHub
 
