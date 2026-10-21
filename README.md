@@ -48,6 +48,6 @@ Inicializa o conecta este directorio a un repositorio GitHub y sube los archivos
 
 ## Desplegar en Render
 
-El archivo `render.yaml` define el servicio web Docker y una base PostgreSQL administrada. Conecta el repositorio a Render y crea un **Blueprint**; Render provisionará los recursos. El plan de base de datos del Blueprint puede requerir cambiarse según disponibilidad y costo de Render. Al desplegar, la URL pública tendrá la forma `https://<servicio>.onrender.com/api/maestros/4`.
+El archivo `render.yaml` define el servicio web Docker y una base PostgreSQL administrada en planes gratuitos. Conecta el repositorio a Render y crea un **Blueprint**; Render provisionará los recursos. El servicio web gratuito se duerme tras 15 minutos sin tráfico y la base PostgreSQL gratuita vence a los 30 días; para conservar la base a largo plazo, cambia su plan en Render a uno de pago antes del vencimiento. Al desplegar, la URL pública tendrá la forma `https://<servicio>.onrender.com/api/maestros/4`.
 
 El servicio n8n de este Compose es local. Para que el flujo consuma la API desplegada, impórtalo también en una instancia de n8n accesible por internet y cambia la URL del nodo a la URL pública de Render. No incluyas secretos de producción en el repositorio.

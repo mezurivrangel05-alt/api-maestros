@@ -2,13 +2,13 @@ databases:
   - name: api-maestros-db
     databaseName: maestros
     user: maestros
-    plan: basic-256mb
+    plan: free
 
 services:
   - type: web
     name: api-maestros
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /health
     envVars:
       - key: DATABASE_URL
