@@ -1,0 +1,7 @@
+node_modules
+.git
+.env
+n8n_data
+work
+outputs
+README.md

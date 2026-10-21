@@ -1,0 +1,26 @@
+{
+  "name": "Consultar API de maestros cada minuto",
+  "nodes": [
+    {
+      "parameters": { "rule": { "interval": [{ "field": "minutes", "minutesInterval": 1 }] } },
+      "id": "ae152d58-6d13-4e32-a6d4-9f98c63f9911",
+      "name": "Cada minuto",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": { "url": "http://api:3000/api/maestros/4", "options": {} },
+      "id": "165c6934-e7e1-4e3f-8ea4-4d405198b389",
+      "name": "Obtener maestro 4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    }
+  ],
+  "connections": {
+    "Cada minuto": { "main": [[{ "node": "Obtener maestro 4", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" }
+}
